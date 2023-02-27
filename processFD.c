@@ -3,6 +3,7 @@
 #include <dirent.h>
 #include <unistd.h>
 #include <sys/types.h>
+#include <ctype.h>
 
 // A function that prints out the file descriptors of a given process id
 void print_fds(pid_t pid) {
@@ -110,8 +111,8 @@ int main() {
     // Close /proc directory
         
     closedir(dir);
-
-    print_fds(835);    
+    pid_t pid = 9839;
+    print_fds(pid);    
     return 0;
 
 }
