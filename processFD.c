@@ -111,8 +111,6 @@ int main() {
     // Close /proc directory
         
     closedir(dir);
-    pid_t pid = 9839;
-    print_fds(pid);    
     return 0;
 
 }
