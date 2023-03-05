@@ -44,7 +44,7 @@ void print_footer() {
     printf("=============\n");
 }
 
-int main() {
+void getALLProcessFD() {
     // Get the current user id
     uid_t uid = getuid();
 
@@ -111,6 +111,5 @@ int main() {
     // Close /proc directory
         
     closedir(dir);
-    return 0;
 
 }

@@ -5,6 +5,11 @@
 #include <sys/types.h>
 #include <limits.h>
 
+
+#ifndef PATH_MAX
+#define PATH_MAX 4096
+#endif
+
 void print_header() {
     printf("    PID  FD  Filename\n");
     printf("    =========================\n");
