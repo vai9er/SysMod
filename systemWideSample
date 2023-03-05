@@ -1,0 +1,28 @@
+    PID  FD  Filename
+    =========================
+    8591   0 /dev/null
+    8591   1 /dev/null
+    8591   2 /dev/null
+    8591   3 anon_inode:[eventpoll]
+    8591   4 pipe:[102409]
+    8591   5 pipe:[102409]
+    8591   6 pipe:[102410]
+    8591   7 pipe:[102410]
+    8591   8 anon_inode:[eventfd]
+    8591   9 /dev/null
+    8591  10 socket:[90935]
+    8591  11 /tmp/edg0_8591 (deleted)
+    8591  26 /dev/null
+    8591  27 /dev/null
+    8591  28 /dev/null
+    8591  38 /home/vai9er/.config/Code/logs/20230305T000652/window1/exthost/exthost.log
+    8591  39 /home/vai9er/.config/Code/logs/20230305T000652/window1/exthost/extensionTelemetry.log
+    8591  40 /opt/visual-studio-code/resources/app/node_modules.asar
+    8591  43 /home/vai9er/.config/Code/logs/20230305T000652/window1/exthost/vscode.microsoft-authentication/Microsoft Authentication.log
+    8591  44 /home/vai9er/.config/Code/logs/20230305T000652/window1/exthost/vscode.git/Git.log
+    8591  45 /home/vai9er/.config/Code/logs/20230305T000652/window1/exthost/output_logging_20230305T000653/2-Markdown Language Server.log
+    8591  49 /home/vai9er/.config/Code/logs/20230305T000652/window1/exthost/output_logging_20230305T000653/1-GitHub Copilot.log
+    8591  50 /home/vai9er/.config/Code/logs/20230305T000652/window1/exthost/vscode.github-authentication/GitHub Authentication.log
+    8591  52 /home/vai9er/.config/Code/logs/20230305T000652/window1/exthost/output_logging_20230305T000653/3-remote-attach.log
+    8591 103 /opt/visual-studio-code/v8_context_snapshot.bin
+    =========================
