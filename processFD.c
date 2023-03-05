@@ -12,7 +12,8 @@ void print_fds(pid_t pid) {
     sprintf(path, "/proc/%d/fd", pid);
     DIR *dir = opendir(path);
     if (dir == NULL) {
-        perror("CANNOT OPEN");
+        printf("CANNOT OPEN %d", pid);
+        perror(" : no access to fd");
         return;
     }
 
