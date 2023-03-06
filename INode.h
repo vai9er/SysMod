@@ -37,7 +37,7 @@ void printAllINode() {
 
 }
 
-void printINodeForPID(pid_t *pid) {
+void printINodeForPID(pid_t pid) {
     DIR *dirp;
     struct dirent *dp;
     char path[1024];
