@@ -87,9 +87,8 @@ int main(int argc, char *argv[]) {
         printAllINode();}
 
         else {
-            char* str;
-            sprintf(str, "%d", pid);
-            printINodeForPID(str);}
+            printINodeForPID(pid);
+            }
     }
 
     if (composite != 0){
