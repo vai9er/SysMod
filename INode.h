@@ -55,7 +55,7 @@ void printINodeForPID(pid_t pid) {
             if (dp2->d_name[0] >= '0' && dp2->d_name[0] <= '9') {
                 sprintf(path, "/proc/%d/fd/%s", pid, dp2->d_name);
                 lstat(path,&sb);
-                printf("%10s %10ld\n", pid,
+                printf("%10d %10ld\n", pid,
                        sb.st_ino);
             }
         }
