@@ -42,7 +42,7 @@ void printComposite() {
 
 }
 
-void printCompositeForPid(pid_t pid) {
+void printCompositeForPid(char *pid) {
     DIR *dirp;
     struct dirent *dp;
     char path[1024];
