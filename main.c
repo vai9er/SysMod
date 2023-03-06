@@ -113,6 +113,12 @@ int main(int argc, char *argv[]) {
         printComposite();
     }
 
+    if (per_process == 0 && system_wide == 0 && vnodes == 0 && composite == 0 && threshold == -1 && pid != -1){
+        char* str3;
+        sprintf(str3, "%d", pid);
+        printCompositeForPid(str3);
+    }
+
     
    return EXIT_SUCCESS;
 }
