@@ -18,6 +18,7 @@ void printFDfooter() {
 
 // A function that prints out the file descriptors of a given process id
 void print_fds(pid_t pid) {
+    printFDheader();
     // Open the directory /proc/<pid>/fd where the file descriptors are listed
     char path[256];
     sprintf(path, "/proc/%d/fd", pid);
@@ -42,6 +43,7 @@ void print_fds(pid_t pid) {
 
     // Close the directory
     closedir(dir);
+    printFDfooter();
 }
 
 
