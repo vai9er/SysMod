@@ -50,7 +50,7 @@ void print_fds(pid_t pid) {
 void getALLProcessFD() {
     // Get the current user id
     uid_t uid = getuid();
-
+    printFDheader();
     // Open the directory /proc where all processes are listed
     DIR *dir = opendir("/proc");
     if (dir == NULL) {
@@ -58,7 +58,6 @@ void getALLProcessFD() {
     }
 
     // Print out a header for the table
-    printFDheader();
 
     // Loop through each entry in /proc
     struct dirent *entry;
