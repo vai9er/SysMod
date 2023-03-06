@@ -37,6 +37,7 @@ void printAllINode() {
 
 }
 
+
 void printINodeForPID(pid_t pid) {
     DIR *dirp;
     struct dirent *dp;
@@ -46,13 +47,13 @@ void printINodeForPID(pid_t pid) {
     printf("     PID     Inode\n");
     printf("==================\n");
 
-    sprintf(path, "/proc/%s/fd", pid);
+    sprintf(path, "/proc/%d/fd", pid);
     DIR *dirp2 = opendir(path);
     if (dirp2) {
         struct dirent *dp2;
         while ((dp2 = readdir(dirp2)) != NULL) {
             if (dp2->d_name[0] >= '0' && dp2->d_name[0] <= '9') {
-                sprintf(path, "/proc/%s/fd/%s", pid, dp2->d_name);
+                sprintf(path, "/proc/%d/fd/%s", pid, dp2->d_name);
                 lstat(path,&sb);
                 printf("%10s %10ld\n", pid,
                        sb.st_ino);
