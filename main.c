@@ -22,6 +22,7 @@ int main(int argc, char *argv[]) {
         {"systemWide", no_argument, 0, 's'},
         {"Vnodes", no_argument, 0, 'v'},
         {"composite", no_argument, 0, 'c'},
+        {"threshold", required_argument, 0, 't'},
         {0, 0, 0, 0}
     };
 
@@ -101,5 +102,15 @@ int main(int argc, char *argv[]) {
             printCompositeForPid(str2);
             }
     }
+
+    if (threshold != -1){
+        thresh(threshold);
+    }
+
+    if (per_process == 0 && system_wide == 0 && vnodes == 0 && composite == 0 && threshold == -1 && pid == -1){
+        printComposite();
+    }
+
+    
    return EXIT_SUCCESS;
 }

@@ -39,7 +39,7 @@ void printComposite() {
         }
     }
     closedir(dirp);
-
+    printf("=================================================\n");
 }
 
 void printCompositeForPid(char *pid) {
@@ -70,4 +70,5 @@ void printCompositeForPid(char *pid) {
         }
         closedir(dirp2);
     }
+     printf("=================================================\n");
 }
