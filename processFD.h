@@ -127,7 +127,7 @@ void getALLProcessFD() {
             
     // Print out file descriptors of this process
             
-    print_fds(pid);
+    printFDwoHead(pid);
         
     }
 
