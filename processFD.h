@@ -122,12 +122,12 @@ void getALLProcessFD() {
             
     // Skip processes that are not owned by current user
             
-    if (puid != uid) continue;
+        if (puid != uid) continue;
 
             
     // Print out file descriptors of this process
             
-    printFDwoHead(pid);
+        printFDwoHead(pid);
         
     }
 
