@@ -5,6 +5,17 @@
 #include <sys/types.h>
 #include <ctype.h>
 
+// A function that prints out a header for the table
+void printFDheader() {
+    printf("     PID  FD\n");
+    printf("=============\n");
+}
+
+// A function that prints out a footer for the table
+void printFDfooter() {
+    printf("=============\n");
+}
+
 // A function that prints out the file descriptors of a given process id
 void print_fds(pid_t pid) {
     // Open the directory /proc/<pid>/fd where the file descriptors are listed
@@ -33,16 +44,6 @@ void print_fds(pid_t pid) {
     closedir(dir);
 }
 
-// A function that prints out a header for the table
-void print_header() {
-    printf("     PID  FD\n");
-    printf("=============\n");
-}
-
-// A function that prints out a footer for the table
-void print_footer() {
-    printf("=============\n");
-}
 
 void getALLProcessFD() {
     // Get the current user id
@@ -51,12 +52,11 @@ void getALLProcessFD() {
     // Open the directory /proc where all processes are listed
     DIR *dir = opendir("/proc");
     if (dir == NULL) {
-        perror("opendir");
-        return 1;
+        perror("Cant open /proc \n");
     }
 
     // Print out a header for the table
-    print_header();
+    printFDheader();
 
     // Loop through each entry in /proc
     struct dirent *entry;
@@ -105,7 +105,7 @@ void getALLProcessFD() {
         
     // Print out a footer for table
         
-    print_footer();
+    printFDfooter();
 
         
     // Close /proc directory
