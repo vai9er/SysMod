@@ -47,6 +47,34 @@ void print_fds(pid_t pid) {
 }
 
 
+// A function that prints out the file descriptors of a given process id
+void printFDwoHead(pid_t pid) {
+    // Open the directory /proc/<pid>/fd where the file descriptors are listed
+    char path[256];
+    sprintf(path, "/proc/%d/fd", pid);
+    DIR *dir = opendir(path);
+    if (dir == NULL) {
+        printf("CANNOT OPEN %d : no access to fd\n", pid);
+        return;
+    }
+
+    // Loop through each entry in the directory
+    struct dirent *entry;
+    while ((entry = readdir(dir)) != NULL) {
+        // Skip . and .. entries
+        if (entry->d_name[0] == '.') continue;
+
+        // Convert the entry name to an integer (the file descriptor number)
+        int fd = atoi(entry->d_name);
+
+        // Print out the process id and the file descriptor number
+        printf("%8d %3d\n", pid, fd);
+    }
+
+    // Close the directory
+    closedir(dir);
+}
+
 void getALLProcessFD() {
     // Get the current user id
     uid_t uid = getuid();
